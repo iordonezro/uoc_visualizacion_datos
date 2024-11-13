@@ -1,0 +1,1044 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='flights_small+' inline='true' name='federated.0hk2paa07pfj0n111qnoq0yhe9x0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='flights_small' name='textscan.01etsll00g1p7v11wnd8x1x0cri7'>
+            <connection class='textscan' directory='C:/Users/ordon/OneDrive - ELKARLAN/Master/VISUALIZACION DE DATOS/PEC2/dataset/flowmap' filename='flights_small.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='IF [flights_small.csv+].[Table Name] = &apos;flights_small.csv&apos; THEN [flights_small.csv+].[ORIGIN_AIRPORT] ELSE [flights_small.csv+].[DESTINATION_AIRPORT] END' />
+              <expression op='[airports.csv1].[IATA_CODE]' />
+            </expression>
+          </clause>
+          <relation all='true' name='flights_small.csv+' type='union'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES'>
+              <column datatype='integer' name='YEAR' />
+              <column datatype='integer' name='MONTH' />
+              <column datatype='integer' name='DAY' />
+              <column datatype='integer' name='DAY_OF_WEEK' />
+              <column datatype='string' name='AIRLINE' />
+              <column datatype='integer' name='FLIGHT_NUMBER' />
+              <column datatype='string' name='TAIL_NUMBER' />
+              <column datatype='string' name='ORIGIN_AIRPORT' />
+              <column datatype='string' name='DESTINATION_AIRPORT' />
+              <column datatype='integer' name='SCHEDULED_DEPARTURE' />
+              <column datatype='integer' name='DEPARTURE_TIME' />
+              <column datatype='integer' name='DEPARTURE_DELAY' />
+              <column datatype='integer' name='TAXI_OUT' />
+              <column datatype='integer' name='WHEELS_OFF' />
+              <column datatype='integer' name='SCHEDULED_TIME' />
+              <column datatype='integer' name='ELAPSED_TIME' />
+              <column datatype='integer' name='AIR_TIME' />
+              <column datatype='integer' name='DISTANCE' />
+              <column datatype='integer' name='WHEELS_ON' />
+              <column datatype='integer' name='TAXI_IN' />
+              <column datatype='integer' name='SCHEDULED_ARRIVAL' />
+              <column datatype='integer' name='ARRIVAL_TIME' />
+              <column datatype='integer' name='ARRIVAL_DELAY' />
+              <column datatype='integer' name='DIVERTED' />
+              <column datatype='integer' name='CANCELLED' />
+              <column datatype='string' name='CANCELLATION_REASON' />
+              <column datatype='integer' name='AIR_SYSTEM_DELAY' />
+              <column datatype='integer' name='SECURITY_DELAY' />
+              <column datatype='integer' name='AIRLINE_DELAY' />
+              <column datatype='integer' name='LATE_AIRCRAFT_DELAY' />
+              <column datatype='integer' name='WEATHER_DELAY' />
+              <column datatype='string' name='Table Name' />
+            </columns>
+            <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='flights_small.csv' table='[flights_small#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                <column datatype='integer' name='YEAR' ordinal='0' />
+                <column datatype='integer' name='MONTH' ordinal='1' />
+                <column datatype='integer' name='DAY' ordinal='2' />
+                <column datatype='integer' name='DAY_OF_WEEK' ordinal='3' />
+                <column datatype='string' name='AIRLINE' ordinal='4' />
+                <column datatype='integer' name='FLIGHT_NUMBER' ordinal='5' />
+                <column datatype='string' name='TAIL_NUMBER' ordinal='6' />
+                <column datatype='string' name='ORIGIN_AIRPORT' ordinal='7' />
+                <column datatype='string' name='DESTINATION_AIRPORT' ordinal='8' />
+                <column datatype='integer' name='SCHEDULED_DEPARTURE' ordinal='9' />
+                <column datatype='integer' name='DEPARTURE_TIME' ordinal='10' />
+                <column datatype='integer' name='DEPARTURE_DELAY' ordinal='11' />
+                <column datatype='integer' name='TAXI_OUT' ordinal='12' />
+                <column datatype='integer' name='WHEELS_OFF' ordinal='13' />
+                <column datatype='integer' name='SCHEDULED_TIME' ordinal='14' />
+                <column datatype='integer' name='ELAPSED_TIME' ordinal='15' />
+                <column datatype='integer' name='AIR_TIME' ordinal='16' />
+                <column datatype='integer' name='DISTANCE' ordinal='17' />
+                <column datatype='integer' name='WHEELS_ON' ordinal='18' />
+                <column datatype='integer' name='TAXI_IN' ordinal='19' />
+                <column datatype='integer' name='SCHEDULED_ARRIVAL' ordinal='20' />
+                <column datatype='integer' name='ARRIVAL_TIME' ordinal='21' />
+                <column datatype='integer' name='ARRIVAL_DELAY' ordinal='22' />
+                <column datatype='integer' name='DIVERTED' ordinal='23' />
+                <column datatype='integer' name='CANCELLED' ordinal='24' />
+                <column datatype='string' name='CANCELLATION_REASON' ordinal='25' />
+                <column datatype='integer' name='AIR_SYSTEM_DELAY' ordinal='26' />
+                <column datatype='integer' name='SECURITY_DELAY' ordinal='27' />
+                <column datatype='integer' name='AIRLINE_DELAY' ordinal='28' />
+                <column datatype='integer' name='LATE_AIRCRAFT_DELAY' ordinal='29' />
+                <column datatype='integer' name='WEATHER_DELAY' ordinal='30' />
+              </columns>
+            </relation>
+            <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='flights_small.csv1' table='[flights_small#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                <column datatype='integer' name='YEAR' ordinal='0' />
+                <column datatype='integer' name='MONTH' ordinal='1' />
+                <column datatype='integer' name='DAY' ordinal='2' />
+                <column datatype='integer' name='DAY_OF_WEEK' ordinal='3' />
+                <column datatype='string' name='AIRLINE' ordinal='4' />
+                <column datatype='integer' name='FLIGHT_NUMBER' ordinal='5' />
+                <column datatype='string' name='TAIL_NUMBER' ordinal='6' />
+                <column datatype='string' name='ORIGIN_AIRPORT' ordinal='7' />
+                <column datatype='string' name='DESTINATION_AIRPORT' ordinal='8' />
+                <column datatype='integer' name='SCHEDULED_DEPARTURE' ordinal='9' />
+                <column datatype='integer' name='DEPARTURE_TIME' ordinal='10' />
+                <column datatype='integer' name='DEPARTURE_DELAY' ordinal='11' />
+                <column datatype='integer' name='TAXI_OUT' ordinal='12' />
+                <column datatype='integer' name='WHEELS_OFF' ordinal='13' />
+                <column datatype='integer' name='SCHEDULED_TIME' ordinal='14' />
+                <column datatype='integer' name='ELAPSED_TIME' ordinal='15' />
+                <column datatype='integer' name='AIR_TIME' ordinal='16' />
+                <column datatype='integer' name='DISTANCE' ordinal='17' />
+                <column datatype='integer' name='WHEELS_ON' ordinal='18' />
+                <column datatype='integer' name='TAXI_IN' ordinal='19' />
+                <column datatype='integer' name='SCHEDULED_ARRIVAL' ordinal='20' />
+                <column datatype='integer' name='ARRIVAL_TIME' ordinal='21' />
+                <column datatype='integer' name='ARRIVAL_DELAY' ordinal='22' />
+                <column datatype='integer' name='DIVERTED' ordinal='23' />
+                <column datatype='integer' name='CANCELLED' ordinal='24' />
+                <column datatype='string' name='CANCELLATION_REASON' ordinal='25' />
+                <column datatype='integer' name='AIR_SYSTEM_DELAY' ordinal='26' />
+                <column datatype='integer' name='SECURITY_DELAY' ordinal='27' />
+                <column datatype='integer' name='AIRLINE_DELAY' ordinal='28' />
+                <column datatype='integer' name='LATE_AIRCRAFT_DELAY' ordinal='29' />
+                <column datatype='integer' name='WEATHER_DELAY' ordinal='30' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='airports.csv1' table='[airports#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES'>
+              <column datatype='string' name='IATA_CODE' ordinal='0' />
+              <column datatype='string' name='AIRPORT' ordinal='1' />
+              <column datatype='string' name='CITY' ordinal='2' />
+              <column datatype='string' name='STATE' ordinal='3' />
+              <column datatype='string' name='COUNTRY' ordinal='4' />
+              <column datatype='string' name='LATITUDE' ordinal='5' />
+              <column datatype='string' name='LONGITUDE' ordinal='6' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[AIRLINE]' value='[flights_small.csv+].[AIRLINE]' />
+          <map key='[AIRLINE_DELAY]' value='[flights_small.csv+].[AIRLINE_DELAY]' />
+          <map key='[AIRPORT (airports.csv1)]' value='[airports.csv1].[AIRPORT]' />
+          <map key='[AIR_SYSTEM_DELAY]' value='[flights_small.csv+].[AIR_SYSTEM_DELAY]' />
+          <map key='[AIR_TIME]' value='[flights_small.csv+].[AIR_TIME]' />
+          <map key='[ARRIVAL_DELAY]' value='[flights_small.csv+].[ARRIVAL_DELAY]' />
+          <map key='[ARRIVAL_TIME]' value='[flights_small.csv+].[ARRIVAL_TIME]' />
+          <map key='[CANCELLATION_REASON]' value='[flights_small.csv+].[CANCELLATION_REASON]' />
+          <map key='[CANCELLED]' value='[flights_small.csv+].[CANCELLED]' />
+          <map key='[CITY (airports.csv1)]' value='[airports.csv1].[CITY]' />
+          <map key='[COUNTRY (airports.csv1)]' value='[airports.csv1].[COUNTRY]' />
+          <map key='[DAY]' value='[flights_small.csv+].[DAY]' />
+          <map key='[DAY_OF_WEEK]' value='[flights_small.csv+].[DAY_OF_WEEK]' />
+          <map key='[DEPARTURE_DELAY]' value='[flights_small.csv+].[DEPARTURE_DELAY]' />
+          <map key='[DEPARTURE_TIME]' value='[flights_small.csv+].[DEPARTURE_TIME]' />
+          <map key='[DESTINATION_AIRPORT]' value='[flights_small.csv+].[DESTINATION_AIRPORT]' />
+          <map key='[DISTANCE]' value='[flights_small.csv+].[DISTANCE]' />
+          <map key='[DIVERTED]' value='[flights_small.csv+].[DIVERTED]' />
+          <map key='[ELAPSED_TIME]' value='[flights_small.csv+].[ELAPSED_TIME]' />
+          <map key='[FLIGHT_NUMBER]' value='[flights_small.csv+].[FLIGHT_NUMBER]' />
+          <map key='[IATA_CODE (airports.csv1)]' value='[airports.csv1].[IATA_CODE]' />
+          <map key='[LATE_AIRCRAFT_DELAY]' value='[flights_small.csv+].[LATE_AIRCRAFT_DELAY]' />
+          <map key='[LATITUDE (airports.csv1)]' value='[airports.csv1].[LATITUDE]' />
+          <map key='[LONGITUDE (airports.csv1)]' value='[airports.csv1].[LONGITUDE]' />
+          <map key='[MONTH]' value='[flights_small.csv+].[MONTH]' />
+          <map key='[ORIGIN_AIRPORT]' value='[flights_small.csv+].[ORIGIN_AIRPORT]' />
+          <map key='[SCHEDULED_ARRIVAL]' value='[flights_small.csv+].[SCHEDULED_ARRIVAL]' />
+          <map key='[SCHEDULED_DEPARTURE]' value='[flights_small.csv+].[SCHEDULED_DEPARTURE]' />
+          <map key='[SCHEDULED_TIME]' value='[flights_small.csv+].[SCHEDULED_TIME]' />
+          <map key='[SECURITY_DELAY]' value='[flights_small.csv+].[SECURITY_DELAY]' />
+          <map key='[STATE (airports.csv1)]' value='[airports.csv1].[STATE]' />
+          <map key='[TAIL_NUMBER]' value='[flights_small.csv+].[TAIL_NUMBER]' />
+          <map key='[TAXI_IN]' value='[flights_small.csv+].[TAXI_IN]' />
+          <map key='[TAXI_OUT]' value='[flights_small.csv+].[TAXI_OUT]' />
+          <map key='[Table Name]' value='[flights_small.csv+].[Table Name]' />
+          <map key='[WEATHER_DELAY]' value='[flights_small.csv+].[WEATHER_DELAY]' />
+          <map key='[WHEELS_OFF]' value='[flights_small.csv+].[WHEELS_OFF]' />
+          <map key='[WHEELS_ON]' value='[flights_small.csv+].[WHEELS_ON]' />
+          <map key='[YEAR]' value='[flights_small.csv+].[YEAR]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YEAR]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>YEAR</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MONTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MONTH]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>MONTH</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DAY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DAY_OF_WEEK</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DAY_OF_WEEK]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DAY_OF_WEEK</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AIRLINE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AIRLINE]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>AIRLINE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FLIGHT_NUMBER</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FLIGHT_NUMBER]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>FLIGHT_NUMBER</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAIL_NUMBER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TAIL_NUMBER]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>TAIL_NUMBER</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ORIGIN_AIRPORT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ORIGIN_AIRPORT]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>ORIGIN_AIRPORT</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DESTINATION_AIRPORT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DESTINATION_AIRPORT]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DESTINATION_AIRPORT</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHEDULED_DEPARTURE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SCHEDULED_DEPARTURE]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>SCHEDULED_DEPARTURE</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEPARTURE_TIME</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DEPARTURE_TIME]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DEPARTURE_TIME</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEPARTURE_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DEPARTURE_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DEPARTURE_DELAY</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAXI_OUT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TAXI_OUT]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>TAXI_OUT</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WHEELS_OFF</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WHEELS_OFF]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>WHEELS_OFF</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHEDULED_TIME</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SCHEDULED_TIME]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>SCHEDULED_TIME</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ELAPSED_TIME</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ELAPSED_TIME]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>ELAPSED_TIME</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AIR_TIME</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AIR_TIME]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>AIR_TIME</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DISTANCE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DISTANCE]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DISTANCE</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WHEELS_ON</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WHEELS_ON]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>WHEELS_ON</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAXI_IN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TAXI_IN]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>TAXI_IN</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHEDULED_ARRIVAL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SCHEDULED_ARRIVAL]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>SCHEDULED_ARRIVAL</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARRIVAL_TIME</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ARRIVAL_TIME]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>ARRIVAL_TIME</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARRIVAL_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ARRIVAL_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>ARRIVAL_DELAY</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIVERTED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DIVERTED]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>DIVERTED</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CANCELLED</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CANCELLED]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>CANCELLED</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CANCELLATION_REASON</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CANCELLATION_REASON]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>CANCELLATION_REASON</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AIR_SYSTEM_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AIR_SYSTEM_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>AIR_SYSTEM_DELAY</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SECURITY_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SECURITY_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>SECURITY_DELAY</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AIRLINE_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AIRLINE_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>AIRLINE_DELAY</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATE_AIRCRAFT_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LATE_AIRCRAFT_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>LATE_AIRCRAFT_DELAY</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEATHER_DELAY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WEATHER_DELAY]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>WEATHER_DELAY</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[flights_small.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IATA_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IATA_CODE (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>IATA_CODE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AIRPORT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AIRPORT (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>AIRPORT</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CITY (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>CITY</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTRY (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>COUNTRY</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATITUDE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LATITUDE (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>LATITUDE</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONGITUDE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LONGITUDE (airports.csv1)]</local-name>
+            <parent-name>[airports.csv1]</parent-name>
+            <remote-alias>LONGITUDE</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Airline' datatype='string' name='[AIRLINE]' role='dimension' type='nominal' />
+      <column caption='Airline Delay' datatype='integer' name='[AIRLINE_DELAY]' role='measure' type='quantitative' />
+      <column caption='Air System Delay' datatype='integer' name='[AIR_SYSTEM_DELAY]' role='measure' type='quantitative' />
+      <column caption='Air Time' datatype='integer' name='[AIR_TIME]' role='measure' type='quantitative' />
+      <column caption='Arrival Delay' datatype='integer' name='[ARRIVAL_DELAY]' role='measure' type='quantitative' />
+      <column caption='Arrival Time' datatype='integer' name='[ARRIVAL_TIME]' role='measure' type='quantitative' />
+      <column caption='Cancellation Reason' datatype='string' name='[CANCELLATION_REASON]' role='dimension' type='nominal' />
+      <column caption='Cancelled' datatype='integer' name='[CANCELLED]' role='measure' type='quantitative' />
+      <column datatype='string' name='[CITY (airports.csv1)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[COUNTRY (airports.csv1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Route order' datatype='string' name='[Calculation_1024568928398245888]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Table Name] = &apos;flights_small.csv&apos; THEN &apos;1&apos; ELSE &apos;2&apos; END' />
+      </column>
+      <column caption='Route identification' datatype='string' name='[Calculation_1024568928398462977]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[ORIGIN_AIRPORT] + &apos;_&apos; + [DESTINATION_AIRPORT]' />
+      </column>
+      <column caption='Route location' datatype='string' name='[Calculation_1024568928399015938]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Table Name] = &apos;flights_small.csv&apos; THEN [ORIGIN_AIRPORT] ELSE [DESTINATION_AIRPORT] END' />
+      </column>
+      <column datatype='integer' name='[DAY]' role='dimension' type='quantitative' />
+      <column caption='Day Of Week' datatype='integer' name='[DAY_OF_WEEK]' role='dimension' type='quantitative' />
+      <column caption='Departure Delay' datatype='integer' name='[DEPARTURE_DELAY]' role='measure' type='quantitative' />
+      <column caption='Departure Time' datatype='integer' name='[DEPARTURE_TIME]' role='measure' type='quantitative' />
+      <column caption='Destination Airport' datatype='string' name='[DESTINATION_AIRPORT]' role='dimension' type='nominal' />
+      <column caption='Distance' datatype='integer' name='[DISTANCE]' role='measure' type='quantitative' />
+      <column caption='Diverted' datatype='integer' name='[DIVERTED]' role='measure' type='quantitative' />
+      <column caption='Elapsed Time' datatype='integer' name='[ELAPSED_TIME]' role='measure' type='quantitative' />
+      <column caption='Flight Number' datatype='integer' name='[FLIGHT_NUMBER]' role='dimension' type='ordinal' />
+      <column caption='IATA CODE (airports.csv1)' datatype='string' name='[IATA_CODE (airports.csv1)]' role='dimension' type='nominal' />
+      <column caption='Late Aircraft Delay' datatype='integer' name='[LATE_AIRCRAFT_DELAY]' role='measure' type='quantitative' />
+      <column datatype='string' name='[LATITUDE (airports.csv1)]' role='dimension' semantic-role='[Airport].[Name]' type='nominal' />
+      <column datatype='string' name='[LONGITUDE (airports.csv1)]' role='dimension' semantic-role='[Airport].[Name]' type='nominal' />
+      <column caption='Month' datatype='integer' name='[MONTH]' role='dimension' type='quantitative' />
+      <column caption='Origin Airport' datatype='string' name='[ORIGIN_AIRPORT]' role='dimension' type='nominal' />
+      <column caption='Scheduled Arrival' datatype='integer' name='[SCHEDULED_ARRIVAL]' role='measure' type='quantitative' />
+      <column caption='Scheduled Departure' datatype='integer' name='[SCHEDULED_DEPARTURE]' role='measure' type='quantitative' />
+      <column caption='Scheduled Time' datatype='integer' name='[SCHEDULED_TIME]' role='measure' type='quantitative' />
+      <column caption='Security Delay' datatype='integer' name='[SECURITY_DELAY]' role='measure' type='quantitative' />
+      <column datatype='string' name='[STATE (airports.csv1)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Tail Number' datatype='string' name='[TAIL_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Taxi In' datatype='integer' name='[TAXI_IN]' role='measure' type='quantitative' />
+      <column caption='Taxi Out' datatype='integer' name='[TAXI_OUT]' role='measure' type='quantitative' />
+      <column caption='Table Name' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+      <column caption='Weather Delay' datatype='integer' name='[WEATHER_DELAY]' role='measure' type='quantitative' />
+      <column caption='Wheels Off' datatype='integer' name='[WHEELS_OFF]' role='measure' type='quantitative' />
+      <column caption='Wheels On' datatype='integer' name='[WHEELS_ON]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[YEAR]' role='dimension' type='quantitative' />
+      <column caption='flights_small.csv' datatype='table' name='[__tableau_internal_object_id__].[flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='COUNTRY, STATE, CITY' />
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='10000' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='YEAR' />
+        <field-sort-custom-order field='MONTH' />
+        <field-sort-custom-order field='DAY' />
+        <field-sort-custom-order field='DAY_OF_WEEK' />
+        <field-sort-custom-order field='AIRLINE' />
+        <field-sort-custom-order field='FLIGHT_NUMBER' />
+        <field-sort-custom-order field='TAIL_NUMBER' />
+        <field-sort-custom-order field='ORIGIN_AIRPORT' />
+        <field-sort-custom-order field='Calculation_1024568928398462977' />
+        <field-sort-custom-order field='DESTINATION_AIRPORT' />
+        <field-sort-custom-order field='SCHEDULED_DEPARTURE' />
+        <field-sort-custom-order field='DEPARTURE_TIME' />
+        <field-sort-custom-order field='DEPARTURE_DELAY' />
+        <field-sort-custom-order field='TAXI_OUT' />
+        <field-sort-custom-order field='WHEELS_OFF' />
+        <field-sort-custom-order field='SCHEDULED_TIME' />
+        <field-sort-custom-order field='ELAPSED_TIME' />
+        <field-sort-custom-order field='AIR_TIME' />
+        <field-sort-custom-order field='DISTANCE' />
+        <field-sort-custom-order field='WHEELS_ON' />
+        <field-sort-custom-order field='TAXI_IN' />
+        <field-sort-custom-order field='SCHEDULED_ARRIVAL' />
+        <field-sort-custom-order field='ARRIVAL_TIME' />
+        <field-sort-custom-order field='ARRIVAL_DELAY' />
+        <field-sort-custom-order field='DIVERTED' />
+        <field-sort-custom-order field='CANCELLED' />
+        <field-sort-custom-order field='CANCELLATION_REASON' />
+        <field-sort-custom-order field='AIR_SYSTEM_DELAY' />
+        <field-sort-custom-order field='SECURITY_DELAY' />
+        <field-sort-custom-order field='AIRLINE_DELAY' />
+        <field-sort-custom-order field='LATE_AIRCRAFT_DELAY' />
+        <field-sort-custom-order field='WEATHER_DELAY' />
+        <field-sort-custom-order field='Table Name' />
+        <field-sort-custom-order field='Calculation_1024568928399015938' />
+        <field-sort-custom-order field='Calculation_1024568928398245888' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='flights_small.csv' id='flights_small.csv_E3BA5C84BD2343B2BB2397801981BEAD'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='IF [flights_small.csv+].[Table Name] = &apos;flights_small.csv&apos; THEN [flights_small.csv+].[ORIGIN_AIRPORT] ELSE [flights_small.csv+].[DESTINATION_AIRPORT] END' />
+                    <expression op='[airports.csv1].[IATA_CODE]' />
+                  </expression>
+                </clause>
+                <relation all='true' name='flights_small.csv+' type='union'>
+                  <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                    <column datatype='integer' name='YEAR' />
+                    <column datatype='integer' name='MONTH' />
+                    <column datatype='integer' name='DAY' />
+                    <column datatype='integer' name='DAY_OF_WEEK' />
+                    <column datatype='string' name='AIRLINE' />
+                    <column datatype='integer' name='FLIGHT_NUMBER' />
+                    <column datatype='string' name='TAIL_NUMBER' />
+                    <column datatype='string' name='ORIGIN_AIRPORT' />
+                    <column datatype='string' name='DESTINATION_AIRPORT' />
+                    <column datatype='integer' name='SCHEDULED_DEPARTURE' />
+                    <column datatype='integer' name='DEPARTURE_TIME' />
+                    <column datatype='integer' name='DEPARTURE_DELAY' />
+                    <column datatype='integer' name='TAXI_OUT' />
+                    <column datatype='integer' name='WHEELS_OFF' />
+                    <column datatype='integer' name='SCHEDULED_TIME' />
+                    <column datatype='integer' name='ELAPSED_TIME' />
+                    <column datatype='integer' name='AIR_TIME' />
+                    <column datatype='integer' name='DISTANCE' />
+                    <column datatype='integer' name='WHEELS_ON' />
+                    <column datatype='integer' name='TAXI_IN' />
+                    <column datatype='integer' name='SCHEDULED_ARRIVAL' />
+                    <column datatype='integer' name='ARRIVAL_TIME' />
+                    <column datatype='integer' name='ARRIVAL_DELAY' />
+                    <column datatype='integer' name='DIVERTED' />
+                    <column datatype='integer' name='CANCELLED' />
+                    <column datatype='string' name='CANCELLATION_REASON' />
+                    <column datatype='integer' name='AIR_SYSTEM_DELAY' />
+                    <column datatype='integer' name='SECURITY_DELAY' />
+                    <column datatype='integer' name='AIRLINE_DELAY' />
+                    <column datatype='integer' name='LATE_AIRCRAFT_DELAY' />
+                    <column datatype='integer' name='WEATHER_DELAY' />
+                    <column datatype='string' name='Table Name' />
+                  </columns>
+                  <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='flights_small.csv' table='[flights_small#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                      <column datatype='integer' name='YEAR' ordinal='0' />
+                      <column datatype='integer' name='MONTH' ordinal='1' />
+                      <column datatype='integer' name='DAY' ordinal='2' />
+                      <column datatype='integer' name='DAY_OF_WEEK' ordinal='3' />
+                      <column datatype='string' name='AIRLINE' ordinal='4' />
+                      <column datatype='integer' name='FLIGHT_NUMBER' ordinal='5' />
+                      <column datatype='string' name='TAIL_NUMBER' ordinal='6' />
+                      <column datatype='string' name='ORIGIN_AIRPORT' ordinal='7' />
+                      <column datatype='string' name='DESTINATION_AIRPORT' ordinal='8' />
+                      <column datatype='integer' name='SCHEDULED_DEPARTURE' ordinal='9' />
+                      <column datatype='integer' name='DEPARTURE_TIME' ordinal='10' />
+                      <column datatype='integer' name='DEPARTURE_DELAY' ordinal='11' />
+                      <column datatype='integer' name='TAXI_OUT' ordinal='12' />
+                      <column datatype='integer' name='WHEELS_OFF' ordinal='13' />
+                      <column datatype='integer' name='SCHEDULED_TIME' ordinal='14' />
+                      <column datatype='integer' name='ELAPSED_TIME' ordinal='15' />
+                      <column datatype='integer' name='AIR_TIME' ordinal='16' />
+                      <column datatype='integer' name='DISTANCE' ordinal='17' />
+                      <column datatype='integer' name='WHEELS_ON' ordinal='18' />
+                      <column datatype='integer' name='TAXI_IN' ordinal='19' />
+                      <column datatype='integer' name='SCHEDULED_ARRIVAL' ordinal='20' />
+                      <column datatype='integer' name='ARRIVAL_TIME' ordinal='21' />
+                      <column datatype='integer' name='ARRIVAL_DELAY' ordinal='22' />
+                      <column datatype='integer' name='DIVERTED' ordinal='23' />
+                      <column datatype='integer' name='CANCELLED' ordinal='24' />
+                      <column datatype='string' name='CANCELLATION_REASON' ordinal='25' />
+                      <column datatype='integer' name='AIR_SYSTEM_DELAY' ordinal='26' />
+                      <column datatype='integer' name='SECURITY_DELAY' ordinal='27' />
+                      <column datatype='integer' name='AIRLINE_DELAY' ordinal='28' />
+                      <column datatype='integer' name='LATE_AIRCRAFT_DELAY' ordinal='29' />
+                      <column datatype='integer' name='WEATHER_DELAY' ordinal='30' />
+                    </columns>
+                  </relation>
+                  <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='flights_small.csv1' table='[flights_small#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                      <column datatype='integer' name='YEAR' ordinal='0' />
+                      <column datatype='integer' name='MONTH' ordinal='1' />
+                      <column datatype='integer' name='DAY' ordinal='2' />
+                      <column datatype='integer' name='DAY_OF_WEEK' ordinal='3' />
+                      <column datatype='string' name='AIRLINE' ordinal='4' />
+                      <column datatype='integer' name='FLIGHT_NUMBER' ordinal='5' />
+                      <column datatype='string' name='TAIL_NUMBER' ordinal='6' />
+                      <column datatype='string' name='ORIGIN_AIRPORT' ordinal='7' />
+                      <column datatype='string' name='DESTINATION_AIRPORT' ordinal='8' />
+                      <column datatype='integer' name='SCHEDULED_DEPARTURE' ordinal='9' />
+                      <column datatype='integer' name='DEPARTURE_TIME' ordinal='10' />
+                      <column datatype='integer' name='DEPARTURE_DELAY' ordinal='11' />
+                      <column datatype='integer' name='TAXI_OUT' ordinal='12' />
+                      <column datatype='integer' name='WHEELS_OFF' ordinal='13' />
+                      <column datatype='integer' name='SCHEDULED_TIME' ordinal='14' />
+                      <column datatype='integer' name='ELAPSED_TIME' ordinal='15' />
+                      <column datatype='integer' name='AIR_TIME' ordinal='16' />
+                      <column datatype='integer' name='DISTANCE' ordinal='17' />
+                      <column datatype='integer' name='WHEELS_ON' ordinal='18' />
+                      <column datatype='integer' name='TAXI_IN' ordinal='19' />
+                      <column datatype='integer' name='SCHEDULED_ARRIVAL' ordinal='20' />
+                      <column datatype='integer' name='ARRIVAL_TIME' ordinal='21' />
+                      <column datatype='integer' name='ARRIVAL_DELAY' ordinal='22' />
+                      <column datatype='integer' name='DIVERTED' ordinal='23' />
+                      <column datatype='integer' name='CANCELLED' ordinal='24' />
+                      <column datatype='string' name='CANCELLATION_REASON' ordinal='25' />
+                      <column datatype='integer' name='AIR_SYSTEM_DELAY' ordinal='26' />
+                      <column datatype='integer' name='SECURITY_DELAY' ordinal='27' />
+                      <column datatype='integer' name='AIRLINE_DELAY' ordinal='28' />
+                      <column datatype='integer' name='LATE_AIRCRAFT_DELAY' ordinal='29' />
+                      <column datatype='integer' name='WEATHER_DELAY' ordinal='30' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='textscan.01etsll00g1p7v11wnd8x1x0cri7' name='airports.csv1' table='[airports#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='es_ES'>
+                    <column datatype='string' name='IATA_CODE' ordinal='0' />
+                    <column datatype='string' name='AIRPORT' ordinal='1' />
+                    <column datatype='string' name='CITY' ordinal='2' />
+                    <column datatype='string' name='STATE' ordinal='3' />
+                    <column datatype='string' name='COUNTRY' ordinal='4' />
+                    <column datatype='string' name='LATITUDE' ordinal='5' />
+                    <column datatype='string' name='LONGITUDE' ordinal='6' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='flights_small+' name='federated.0hk2paa07pfj0n111qnoq0yhe9x0' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0hk2paa07pfj0n111qnoq0yhe9x0'>
+            <column caption='Route identification' datatype='string' name='[Calculation_1024568928398462977]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[ORIGIN_AIRPORT] + &apos;_&apos; + [DESTINATION_AIRPORT]' />
+            </column>
+            <column caption='Destination Airport' datatype='string' name='[DESTINATION_AIRPORT]' role='dimension' type='nominal' />
+            <column caption='Origin Airport' datatype='string' name='[ORIGIN_AIRPORT]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1024568928398462977]' derivation='None' name='[none:Calculation_1024568928398462977:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Longitude (generated)]' included-values='non-null' />
+          <filter class='categorical' column='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:Calculation_1024568928398462977:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1024568928398462977:nk]' member='&quot;AMA_DAL&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:Calculation_1024568928398462977:nk]</column>
+            <column>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Longitude (generated)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Longitude (generated)]' field-type='quantitative' max='-951329.5770931989' min='-19014498.974686708' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Latitude (generated)]' field-type='quantitative' max='9075613.6138842385' min='56168.130256312899' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:Calculation_1024568928398462977:nk]' />
+              <geometry column='[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Latitude (generated)]</rows>
+        <cols>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{96463457-6E43-4FC5-BB1E-2C569121BDDA}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.10417' source-height='32'>
+    <window class='worksheet' maximized='true' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[avg:ARRIVAL_DELAY:qk]</field>
+            <field>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:Calculation_1024568928398462977:nk]</field>
+            <field>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:Calculation_1024568928399015938:nk]</field>
+            <field>[federated.0hk2paa07pfj0n111qnoq0yhe9x0].[none:LONGITUDE (airports.csv1):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{30BEA83A-E5BE-4384-B78F-AB9C34FC4DC8}' />
+    </window>
+  </windows>
+</workbook>

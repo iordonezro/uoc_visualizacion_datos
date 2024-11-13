@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="flow-map"></div>
+    <script>
+        var data = [
+            { x: [0, 1, null, 1, 2, null, 2, 3], y: [0, 1, null, 1, 2, null, 2, 3], mode: 'lines', line: { color: 'gray', width: 2 }, type: 'scatter' },
+            { x: [0, 1, 2, 3], y: [0, 1, 2, 3], mode: 'markers+text', type: 'scatter', text: ['Ciudad A', 'Ciudad B', 'Ciudad C', 'Ciudad D'], marker: { size: 10, color: 'lightblue' } }
+        ];
+        var layout = { title: 'Mapa de Flujo - Conexiones Simples' };
+        Plotly.newPlot('flow-map', data, layout);
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="spiral-plot"></div>
+    <script>
+        var theta = Array.from({ length: 365 }, (_, i) => i * (360 / 365));
+        var r = theta.map(t => Math.sin(2 * Math.PI * t / 360) + Math.cos(t / 180 * Math.PI) + 1.5);
+        var data = [
+            { r: r, theta: theta, mode: 'lines', type: 'scatterpolar', line: { color: 'purple', width: 2 } }
+        ];
+        var layout = { title: 'Gráfico en Espiral - Patrón de Datos Simulado', polar: { angularaxis: { direction: 'counterclockwise' } } };
+        Plotly.newPlot('spiral-plot', data, layout);
+    </script>
+</body>
+</html>
